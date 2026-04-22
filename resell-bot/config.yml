@@ -1,0 +1,74 @@
+# ============================================================
+#  RESELL BOT — Configuration File
+#  Fill in your API keys below. Everything else is optional.
+#  Secrets (tokens/passwords) should be stored in GitHub
+#  Secrets, not here. See SETUP_GUIDE.md for instructions.
+# ============================================================
+
+telegram:
+  # Leave blank — stored in GitHub Secrets instead
+  bot_token: ""
+  chat_id: ""
+
+bricklink:
+  # Get these at: https://www.bricklink.com/v3/api.page
+  consumer_key: ""
+  consumer_secret: ""
+  token_key: ""
+  token_secret: ""
+
+cardmarket:
+  # Get these at: https://api.cardmarket.com/ws/documentation/API_2.0:Auth
+  app_token: ""
+  app_secret: ""
+  access_token: ""
+  access_token_secret: ""
+
+pricecharting:
+  # Free API key at: https://www.pricecharting.com/api
+  api_key: ""
+
+alerts:
+  # Alert if margin >= this percent (e.g. 20 = 20%)
+  min_margin_percent: 20
+  # Also alert if profit >= this amount in euros, even below margin threshold
+  min_profit_euros: 50
+
+  # Minimum listing price per category (ignore cheaper listings)
+  min_prices:
+    lego: 20
+    pokemon: 5
+    games: 5
+
+# Search settings
+search:
+  # How often to check (handled by GitHub Actions schedule in bot.yml)
+  # PAL region for retro games
+  region: PAL
+
+  # Lego: best resale themes to focus on
+  lego_themes:
+    - star_wars
+    - technic
+    - icons
+    - harry_potter
+    - creator_expert
+    - ideas
+    - architecture
+    - speed_champions
+    - exclusives
+
+  # Additional high-value Lego set numbers to always watch
+  lego_watchlist_sets:
+    - "75192"  # Millennium Falcon
+    - "75313"  # AT-AT
+    - "10305"  # Lion Knights Castle
+    - "10307"  # Eiffel Tower
+    - "10276"  # Colosseum
+    - "42143"  # Ferrari Daytona SP3
+    - "42131"  # Cat D11 Bulldozer
+    - "75341"  # Luke's Landspeeder
+    - "21337"  # Table Football
+    - "10300"  # Back to the Future DeLorean
+    - "76989"  # Horizon Forbidden West
+    - "43217"  # Up! House
